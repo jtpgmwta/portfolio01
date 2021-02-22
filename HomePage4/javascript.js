@@ -16,7 +16,7 @@ $(".slick-slider").slick({
 
 //iTyped
 ityped.init(document.querySelector(".ityped"), {
-    strings: ['Hello World.','Welcome to our site!'],
+    strings: ['Hello World!','Welcome to our site!'],
     typespeed: 100,
     backspeed: 70,
     startDelay: 1000,
