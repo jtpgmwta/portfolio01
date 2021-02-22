@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lag="ja">
+    <head>
+        <title>KouheiTsuzukuのポートフォリオサイト</title>
+        <meta charset="utf-8">
+        <meta name="description" content="KouheiTsuzukuが制作したポートフォリオサイトです。スマートフォンでも快適に閲覧できるレスポンシブデザインです。WordPressを使用しています。">
+        <meta name="keywords" content="ポートフォリオ,HTML,CSS,レスポンシブ,レスポンシブデザイン,WordPress">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="./slick/slick.css">
+        <link rel="stylesheet" href="./slick/slick-theme.css">
+        <link rel="stylesheet" href="./iTyped/iTyped.css">
+        <link rel="stylesheet" href="./scrollbar/jquery.mCustomScrollbar.min.css">
+        <script type="text/javascript" language="javascript">
+            function getUserAge( year, month, day ) {
+              //誕生日を一旦 Date クラスに変換する
+              var birthdayDate = new Date(year, month - 1, day);
+             
+              //Date クラスは不正の値で初期化したとき、初期化に利用した数値と同じ数値にならないので、そこで正しい数値であるかを判定する
+              if( year != birthdayDate.getFullYear() ||
+                  (month - 1) != birthdayDate.getMonth() ||
+                  day != birthdayDate.getDate() ) {
+                return null;
+              }
+             
+              //今日の日付けを取得する
+              var todayDate = new Date();
+             
+              //誕生日を計算する
+              var userAge = todayDate.getFullYear() - birthdayDate.getFullYear();
+             
+              //誕生日が当年込みの計算のため、もし今年の誕生日を迎えていない場合は1歳年齢を減らす
+              var currentYearDate = new Date(todayDate.getFullYear(), birthdayDate.getMonth(), birthdayDate.getDate());
+              if(currentYearDate > todayDate) {
+                userAge = ( userAge - 1 );
+              }
+             
+              return userAge;
+            }
+
+            </script>
+    </head>
+    <body>
+        <div class="custom-scroll">
+            <div class="wrapper">
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="mouseTrac"></div>
+            <header>
+                
+                <nav class="header-nav">
+                    <div class="header-logo"><a href="#slideShow"><img src="./img/logo-white.png" alt="logo"></a></div>
+                    <ul>
+                        <li><a href="#TOP">TOP</a></li>
+                        <li><a href="#ABOUT">ABOUT</a></li>
+                        <li><a href="#ACHIEVEMENT">ACHIEVEMENT</a></li>
+                        <li><a href="#SERVICE">SERVICE</a></li>
+                        <li><a href="#INFO">INFO</a></li>
+                        <li><a href="#CONTACT">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section id="slideShow">
+                    <div class="ityped-wrapper"><span class="ityped"></span></div>
+                    <div class="slick-slider">
+                        <div class="slide01" style="background-image:url('./img/slide-img01.jpg')"></div>
+                        <div class="slide02" style="background-image:url('./img/slide-img02.jpg')"></div>
+                        <div class="slide03" style="background-image:url('./img/slide-img03.jpg')"></div>
+                        <div class="slide04" style="background-image:url('./img/slide-img04.jpg')"></div>
+                        <div class="slide05" style="background-image:url('./img/slide-img05.jpg')"></div>
+                    </div>
+                    <div class="creative-commons">写真はすべて<a href="https://creativecommons.org/licenses/by/4.0/">クリエイティブ・コモンズ・ライセンス（表示4.0 国際）</a>のもとに掲載を許諾されています。</div>
+                </section>
+                <section id="TOP" class="fadeIn">
+                    <h1>ポートフォリオサイト</h1>
+                    <p>このサイトはKouheiTuzukuのポートフォリオサイトです。</p>
+                    <p>この度はこちらのポートフォリオを閲覧していただきありがとうございます。<br>
+                    私は茨城県内の大学に通いながら副業としてランサーズでフリーランスの活動をしております。<br>
+                    フロントエンドの言語を主に使用しておりますが、お客様のご希望によっては<br>サーバーサイドの言語も勉強しつつ利用することもございます。<br>
+                    勉強中の身ではありますが、お客様のご希望に沿うため誠心誠意努力して作業しております。<br>
+                    是非一度ご依頼を検討していただけると幸いです。</p>
+                </section>
+                <section id="ABOUT" class="fadeIn">
+                    <div>
+                        <h2 id="ABOUT-title">ABOUT</h2>
+                    </div>
+                    <div class="f-container01">
+                        <div class="f-item01">
+                        <img src="img/person.png" id="ABOUT-icon" alt="person">
+                        </div>
+                        <div class="f-item02">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td>Kouhei Tuzuku</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Age</th>
+                                        <td><div id="age"><script>
+                                            document.write(getUserAge(2001,2,26));
+                                        </script></div></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th>Gender</th>
+                                        <td>Male</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Skill</th>
+                                        <td>HTML5,CSS3,JavaScript,PHP</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a href="https://www.lancers.jp/profile/Kouhei_Tuzuku" class="more-btn"><span>VIEW MORE</span><span>VIEW MORE</span></a>
+                </section>
+                <section id="ACHIEVEMENT" class="fadeIn">
+                    <div>
+                        <h2 id="ACHIEVEMENT-title">ACHIEVEMENT</h2>
+                    </div>
+                    <div class="f-container02">
+                        <div class="f-item03">
+                        <img src="img/medal.png" id="ACHIEVEMENT-icon" alt="medal">
+                        </div>
+                        <div class="f-item04">
+                            <ul id="ACHIEVEMENT-list">
+                                <li>2021/01/27 <a href="https://info.lancers.jp/20004">シルバーランク</a>に昇格</li>
+                                <li>2020/09/14 <a href="https://info.lancers.jp/20004">ブロンズランク</a>に昇格</li>
+                                <li>2020/09/10 <a href="https://info.lancers.jp/20004">レギュラーランク</a>に認定</li>
+                                <li>2020/09/09 ランサーズに登録</li>
+                                <!-- <li>具体的な事例や実績は<a href="https://www.lancers.jp/profile/Kouhei_Tuzuku/feedback">ランサーズページ</a>からご覧ください。</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://www.lancers.jp/profile/Kouhei_Tuzuku/feedback" class="more-btn"><span>VIEW MORE</span><span>VIEW MORE</span></a>
+                </section>
+                <section id="SERVICE" class="fadeIn">
+                    <div>
+                        <h2 id="SERVICE-title">SERVICE</h2>
+                    </div>
+                    <div class="f-container03">
+                        <ul id="SERVICE-list" class="f-item05">
+                            <li><p>HTML,CSSコーディング</p><img src="img/coding.png" alt="coding"><p>￥10,000~</p></li>
+                            <li><p>レスポンシブ対応</p><img src="img/smartphone.png" alt="smartphone"><p>￥15,000~</p></li>
+                            <li><p>Wordpress対応</p><img src="img/wordpress.png" alt="wordpress"><p>￥15,000~</p></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="INFO" class="fadeIn">
+                    <h2>INFO</h2>
+                    <div class="f-container04">
+                        <div class="infomation f-item06">
+                            <h3>お知らせ</h3>
+                        </div>
+                        <div class="blog f-item07">
+                            <h3>ブログ</h3>
+                        </div>
+                    </div>
+                    
+
+                </section>
+                <section id="CONTACT">
+                    <div class="f-container04">
+                        <div class="f-item07">
+                            <h2 id="CONTACT-title">CONTACT</h2>
+                            <img src="img/message.png" id="CONTACT-icon" alt="message">
+                        </div>
+                        <div class="f-item08">
+                            
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <img src="./img/logo-white.png" alt="ロゴ">
+                <p>&copy;2021 KouheiTuzuku</p>
+            </footer>
+        </div>
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./slick/slick.min.js"></script>
+        <script type="text/javascript" src="./iTyped/index.min.js"></script>
+        <!-- <script type="text/javascript" src="./jquery.ripples-min.js"></script> -->
+        <!-- <script type="text/javascript" src="./scrollbar/jquery.mCustomScrollbar.concat.min.js"></script> -->
+        <script type="text/javascript" src="javascript.js"></script>
+    </body>
+</html>
